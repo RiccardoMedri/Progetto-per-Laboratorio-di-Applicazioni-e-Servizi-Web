@@ -1,0 +1,57 @@
+body {
+
+    .navbar {
+        padding: 1rem;
+
+    .container {
+      display: flex;
+      align-items: center;
+
+        > div {
+            flex: 1;
+
+            a {
+            color: #fff !important;
+            }
+        }
+
+        > div:first-child {
+            text-align: left;
+        }
+        > div:nth-child(2) {
+            text-align: center;
+        }
+        > div:last-child {
+            text-align: right;
+        }
+    }
+    }
+
+    #hero-section {
+        padding: 40px;
+        margin: 40px;
+
+        .btn-lg {
+            padding: 0.75rem 2rem;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            border-radius: 10px;
+
+            &:hover {
+                transform: scale(1.05);
+            }
+        }
+    }
+
+    #chat-body {
+        max-height: 700px;
+        overflow-y: auto;
+
+        .chat-message {
+            max-width: 47%;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+    }
+    
+}

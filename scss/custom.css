@@ -1,0 +1,46 @@
+body .navbar {
+  padding: 1rem;
+}
+body .navbar .container {
+  display: flex;
+  align-items: center;
+}
+body .navbar .container > div {
+  flex: 1;
+}
+body .navbar .container > div a {
+  color: #fff !important;
+}
+body .navbar .container > div:first-child {
+  text-align: left;
+}
+body .navbar .container > div:nth-child(2) {
+  text-align: center;
+}
+body .navbar .container > div:last-child {
+  text-align: right;
+}
+body #hero-section {
+  padding: 40px;
+  margin: 40px;
+}
+body #hero-section .btn-lg {
+  padding: 0.75rem 2rem;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+  border-radius: 10px;
+}
+body #hero-section .btn-lg:hover {
+  transform: scale(1.05);
+}
+body #chat-body {
+  max-height: 700px;
+  overflow-y: auto;
+}
+body #chat-body .chat-message {
+  max-width: 47%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/*# sourceMappingURL=custom.css.map */
