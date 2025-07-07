@@ -17,8 +17,16 @@ if ($_SESSION['user_role'] === "cliente" && $_SESSION['user_id'] != $ticket->rec
 
 // Controlla esistenza del percorso del file
 $filename = basename($_GET['file']); // Sanitize
-$filepath = __DIR__ . '/uploads/' . $filename;
 
+// Controlla esistenza dell'allegato a DB e che appartenga al ticket passato nella GET
+$attachment = Attachment::getAttachment('att_filename', $filename);
+if (!$attachment || $attachment['att_ticket_id'] != $ticket->data['tic_id']) {
+    http_response_code(404);
+    exit("File non trovato o non associato al ticket.");
+}
+
+// Controllo fisico del file 
+$filepath = __DIR__ . '/uploads/' . $filename;
 if (!file_exists($filepath)) {
     http_response_code(404);
     exit("File non trovato.");
