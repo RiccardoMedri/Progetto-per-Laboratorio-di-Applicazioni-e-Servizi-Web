@@ -28,7 +28,7 @@ class Attachment {
         $this->data['att_upload_date'] = Utils::formatDateTime($this->record['att_upload_date']);
     }
 
-    static function getAttachment($fields, $value)
+    static function getAttachment($field, $value)
     {
         global $dbo;
         return $dbo->find(self::$table, $field, $value);
