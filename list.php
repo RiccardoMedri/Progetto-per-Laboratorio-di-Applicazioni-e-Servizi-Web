@@ -31,7 +31,7 @@
                 <a class="navbar-brand" href="#">Ticketing System</a>
             </div>
             <div id="navbarNav">
-                <a class="nav-link" href="client">API Test</a>
+                <a class="nav-link" href="client/">API Test</a>
             </div>
             <div id="navbarNav">
                 <a class="nav-link" href="opCRUD.php?operation=logout">Logout</a>
